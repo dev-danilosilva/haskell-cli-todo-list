@@ -48,13 +48,13 @@ pathCheckParser = pure PathCheck
 
 commandParser :: Parser Command
 commandParser = subparser $
-       command "info"    (info infoParser   (progDesc "Show Info"))
-    <> command "init"    (info initParser   (progDesc "Initialize a new to do List"))
-    <> command "add"     (info addParser    (progDesc "Add a new item to the list"))
-    <> command "view"    (info viewParser   (progDesc "View item"))
-    <> command "list"    (info listParser   (progDesc "List all list items"))
-    <> command "update"  (info updateParser (progDesc "Update a list item"))
-    <> command "remove"  (info removeParser (progDesc "Remove a list item"))
+       command "info"    (info infoParser      (progDesc "Show Info"))
+    <> command "init"    (info initParser      (progDesc "Initialize a new to do List"))
+    <> command "add"     (info addParser       (progDesc "Add a new item to the list"))
+    <> command "view"    (info viewParser      (progDesc "View item"))
+    <> command "list"    (info listParser      (progDesc "List all list items"))
+    <> command "update"  (info updateParser    (progDesc "Update a list item"))
+    <> command "remove"  (info removeParser    (progDesc "Remove a list item"))
     <> command "path"    (info pathCheckParser (progDesc "Shows Current Data Path"))
 
 optionsParser :: Parser Options
