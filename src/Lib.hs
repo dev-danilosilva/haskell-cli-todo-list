@@ -1,7 +1,9 @@
-module Lib
-    ( greetings
-    ) where
+module Lib where
 
+data Todo = Todo
+    { title :: String
+    , done  :: Bool
+    }
 
-greetings :: String
-greetings = "Hello Haskell!"
+todoList :: [Todo]
+todoList = []
